@@ -1,0 +1,38 @@
+{
+  "name": "mathwell-mba",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "turbo run clean && rm -rf node_modules",
+    "storybook": "turbo run storybook --parallel",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "eslint-config-custom": "*",
+    "postcss": "^8.4.16",
+    "prettier": "latest",
+    "tailwindcss": "^3.1.8",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
+    "next": "12.2.5",
+    "next-redux-wrapper": "^7.0.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.2",
+    "turbo": "^1.4.5"
+  },
+  "packageManager": "npm@8.15.0"
+}
