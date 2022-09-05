@@ -17,7 +17,7 @@ const UserMenu = () => {
     }
 
     return <div className="w-12 h-12 rounded-full bg-slate-200 text-center align-middle" onClick={handleClick}>
-        <Image src={avatar} height={40} width={40} />
+        <Image src={avatar} height={40} width={40} alt="user"/>
     </div>
 }
 
