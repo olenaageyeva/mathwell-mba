@@ -20,3 +20,14 @@ export interface ILessons{
     processes?: string[],
     public?: string[] 
 }
+
+export interface ILesson{
+    title: string;
+    content: IContent[]
+}
+
+export interface IContent{
+   type: "plain" | "question" | "match" | "sort" | "label" | "type";
+   image: string; 
+   text: string[];
+}

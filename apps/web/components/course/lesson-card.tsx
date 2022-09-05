@@ -10,7 +10,7 @@ interface Props {
 const LessonCard = ({ course, title, chapter }: Props) => <div className="w-full bg-white my-7 text-gray-400 text-left divide-y divide-gray-200">
     <div className="title flex w-full p-4">
         <div className='w-14 h-14 rounded-full bg-emerald-200 text-center align-middle my-auto'>
-            <Image src={videoIcon} height={50} width={50} />
+            <Image src={videoIcon} height={50} width={50} alt="lesson" />
         </div>
         <span className="w-5/6 text-xl uppercase font-nunito font-bold text-left mx-4">
             {`Chapter ${chapter + 1}. ${title} `}

@@ -24,11 +24,11 @@ const Header = ({ view, course }: Props) =>
             </div>
             : view==="course" ? <div className="m-2 bg-slate-100 rounded-full w-12 h-12 drop-shadow-lg">
                 <Link href="/dashboard">
-                    <Image src={back} width={40} height={40} />
+                    <Image src={back} width={40} height={40} alt="back" />
                 </Link>
             </div> : <div className="m-2 bg-slate-100 rounded-full w-12 h-12 drop-shadow-lg">
                 <Link href={`/course/${course}`}>
-                    <Image src={back} width={40} height={40} />
+                    <Image src={back} width={40} height={40} alt="back"/>
                 </Link>
             </div>
         }

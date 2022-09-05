@@ -7,7 +7,7 @@ const Sidebar = () => <div className="m-4 w-1/3 space-y-4">
     <div className="bg-blue-600 text-slate-300 uppercase p-8">
         <p className="font-normal text-lg">Status</p>
         <p className="text-3xl font-bold">On Track</p>
-        <div className='my-4'><Image src={checkmark} /></div>
+        <div className='my-4'><Image src={checkmark}  alt="check"/></div>
         <p className="font-normal text-lg normal-case">Keep up the good work!</p>
     </div>
     <div className="divide-y divide-gray-400 bg-slate-200 p-4  text-slate-600">
@@ -17,10 +17,10 @@ const Sidebar = () => <div className="m-4 w-1/3 space-y-4">
         </div>
         <div className='py-4 text-left'>
             <p className="text-lg font-medium text-center py-2">Recommended Courses</p>
-            <p className='text-red-400 uppercase font-semibold text-left'><Image src={checkbox} width={15} height={15} />
+            <p className='text-red-400 uppercase font-semibold text-left'><Image src={checkbox} width={15} height={15} alt="checkbox" />
                 <span className='text-red-400 uppercase font-semibold text-left px-2'>Characteristics of good UX </span>
             </p>
-            <p className='text-red-400 uppercase font-semibold text-left'><Image src={checkbox} width={15} height={15} />
+            <p className='text-red-400 uppercase font-semibold text-left'><Image src={checkbox} width={15} height={15} alt="checkbox"/>
                 <span className='text-red-400 uppercase font-semibold text-left px-2'>Product Development Life Cycle </span>
             </p>
             <div className='text-center my-4'>
