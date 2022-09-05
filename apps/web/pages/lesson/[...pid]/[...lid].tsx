@@ -10,7 +10,7 @@ const LessonPage = ({ course }: Props) => {
     const { pid, lid } = router.query
 
     return <div className="w-full bg-slate-50 max-h-max">
-        <Header {...{ view: "lesson", course: String(pid), lesson: lid }} />
+        <Header {...{ view: "lesson" }} />
         <div className="flex max-w-6xl text-center mx-auto w-full space-x-8  h-full p-4">
             <div>
                 <p>{pid}</p>

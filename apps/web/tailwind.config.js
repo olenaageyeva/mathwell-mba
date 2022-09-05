@@ -16,7 +16,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        nunito: ["Nunito Sans", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
+        sans: ['sans-serif'],
+        roboto: ['Roboto Slab', 'sans-serif'],
       },
     },
   },

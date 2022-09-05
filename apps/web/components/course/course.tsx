@@ -7,8 +7,8 @@ interface Props {
 }
 
 const Course = ({ course }: Props) => {
-    const title = courses.find((item) => item.id === course)?.title;
-    const lessonList = lessons[course] || []
+    const title = courses.find((item) => item.id === course)?.title || "";
+    const lessonList = lessons[course as keyof typeof lessons] || [];
 
     return <div className="m-4 w-2/3 bg-slate-200">{/*main*/}
 

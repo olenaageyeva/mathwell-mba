@@ -10,7 +10,7 @@ interface Props {
 const CourseHeader = ({ course, title }: Props) => <div className="w-full p-6 text-left bg-green-200 divide-y divide-gray-400"> {/*coure*/}
     <div>
         <div className="w-full px-7 text-left flex">
-            <div className='rounded-full w-24 h-24 bg-slate-50 text-center align-middle w-1/6 my-auto'>
+            <div className='rounded-full bg-slate-50 text-center align-middle w-1/6 my-auto'>
                 <Image src={books} height={80} width={80} />
             </div>
             <span className="my-auto text-5xl uppercase font-nunito font-bold text-green-600 p-8 w-5/6">{title}</span>

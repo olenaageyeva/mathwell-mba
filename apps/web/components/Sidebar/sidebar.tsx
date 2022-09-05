@@ -12,11 +12,11 @@ const Sidebar = () => <div className="m-4 w-1/3 space-y-4">
     </div>
     <div className="divide-y divide-gray-400 bg-slate-200 p-4  text-slate-600">
         <div className='p-4'>
-            <p className="font-normal text-2xl font-medium">Week 19</p>
+            <p className="text-2xl font-medium">Week 19</p>
             <p>September 5- September 12</p>
         </div>
         <div className='py-4 text-left'>
-            <p className="font-normal text-lg font-medium text-center py-2">Recommended Courses</p>
+            <p className="text-lg font-medium text-center py-2">Recommended Courses</p>
             <p className='text-red-400 uppercase font-semibold text-left'><Image src={checkbox} width={15} height={15} />
                 <span className='text-red-400 uppercase font-semibold text-left px-2'>Characteristics of good UX </span>
             </p>
