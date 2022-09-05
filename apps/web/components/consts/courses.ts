@@ -1,6 +1,6 @@
 export const courses = [{ title: "UX Design & MVP", id: "design" },
 { title: "Financial Documentation & Accounting", id: "accounting" },
-{ title: "Web Dvelopment & Online Presence", id: "web" },
+{ title: "Web Development & Online Presence", id: "web" },
 { title: "Operational Management", id: "processes" },
 { title: "Data & Decisions", id: "data" }, { title: "Public Relationship", id: "public" }]
 

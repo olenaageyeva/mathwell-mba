@@ -8,9 +8,10 @@ import Link from "next/link";
 
 interface Props {
     view: string;
+    course?: string;
 }
 
-const Header = ({ view }: Props) =>
+const Header = ({ view, course }: Props) =>
     <div className="bg-green-400 flex justify-between">
         {view === "dashboard" ?
             <div className="flex align-middle">
@@ -21,8 +22,12 @@ const Header = ({ view }: Props) =>
                     <Logo />
                 </div>
             </div>
-            : <div className="m-2 bg-slate-100 rounded-full w-12 h-12 drop-shadow-lg">
+            : view==="course" ? <div className="m-2 bg-slate-100 rounded-full w-12 h-12 drop-shadow-lg">
                 <Link href="/dashboard">
+                    <Image src={back} width={40} height={40} />
+                </Link>
+            </div> : <div className="m-2 bg-slate-100 rounded-full w-12 h-12 drop-shadow-lg">
+                <Link href={`/course/${course}`}>
                     <Image src={back} width={40} height={40} />
                 </Link>
             </div>
