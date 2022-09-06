@@ -11,8 +11,6 @@ const CoursePage = ({ course }: Props) => {
     const router = useRouter()
     const { pid } = router.query
 
-    console.log("********************", String(pid))
-
     return <div className="w-full bg-slate-50 max-h-max">
         <Header view="course" />
         <div className="flex max-w-6xl text-center mx-auto w-full space-x-8  h-full p-4">

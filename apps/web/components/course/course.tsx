@@ -1,4 +1,4 @@
-import { courses, lessons } from "../consts/courses"
+import { courses, ILesson, ILessons, lessons } from "../consts/courses"
 import CourseHeader from './course-header';
 import LessonCard from './lesson-card';
 
@@ -16,13 +16,13 @@ const Course = ({ course }: Props) => {
 
         <div className="flex ">
             <div className="w-1/4 flex flex-col justify-around">
-                {lessonList.map((item: string, index: number) =>
+                {lessonList.map((item: ILesson, index: number) =>
                     <div className='rounded-full h-12 w-12 bg-red-400 text-slate-100 leading-10 mx-auto font-medium text-lg'>{index + 1}</div>)
                 }
             </div>
             <div className="flex-col w-full h-fit px-2">
-                {lessonList.map((item: string, index: number) =>
-                    <LessonCard {...{ course, title: item, chapter: index }} />
+                {lessonList.map((item: ILesson, index: number) =>
+                    <LessonCard {...{ course, title: item.title, chapter: index }} />
                 )}
             </div>
         </div>
