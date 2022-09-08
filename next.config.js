@@ -13,6 +13,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  distDir: 'dist/apps/storybook/storybook-static'
 }
 
 module.exports = (_phase, { defaultConfig }) => {

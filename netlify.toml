@@ -1,0 +1,3 @@
+[build]
+  command = "npm run buil"
+  publish = "/dist/apps/storybook/storybook-static"
