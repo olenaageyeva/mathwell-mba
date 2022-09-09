@@ -12,8 +12,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  distDir: 'dist/apps/storybook/storybook-static'
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],  
 }
 
 module.exports = (_phase, { defaultConfig }) => {
