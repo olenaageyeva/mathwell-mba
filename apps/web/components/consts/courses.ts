@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export const courses = [{ title: "UX Design & MVP", id: "design" },
 { title: "Financial Documentation & Accounting", id: "accounting" },
 { title: "Web Development & Online Presence", id: "web" },
@@ -265,5 +267,5 @@ export interface ILesson {
 export interface IContent {
     type: "plain" | "question" | "match" | "sort" | "label" | "type" | null;
     image: string | null;
-    text: { type: string, place?: string, text: string | string[] | HTMLElement[]}[];
+    text: { type: string, place?: string, text: string | string[]}[];
 }
