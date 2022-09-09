@@ -265,5 +265,5 @@ export interface ILesson {
 export interface IContent {
     type: "plain" | "question" | "match" | "sort" | "label" | "type" | null;
     image: string | null;
-    text: { type: string, place?: string, text: string | string[] }[];
+    text: { type: string, place?: string, text: string | string[] | HTMLElement[]}[];
 }
