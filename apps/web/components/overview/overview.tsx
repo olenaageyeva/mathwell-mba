@@ -20,7 +20,7 @@ const Overview = ({ course = null, lesson = null, done = () => { } }: Props) => 
     return <div className="flex flex-col max-w-lg text-roboto text-center mx-auto w-full h-full p-8  pb-32 justify-between">
         <div className="w-full transition-all animate-slidedown">
             <h3 className="text-2xl uppercase font-nunito font-bold text-green-600 my-2 delay-100 animate-fadein">{title}</h3>
-            <p className="text-md uppercase font-nunito text-slate-400 my-2 delay-500 animate-fadein">What you'll learn in this lesson</p>
+            <p className="text-md uppercase font-nunito text-slate-400 my-2 delay-500 animate-fadein">What you will learn in this lesson</p>
             <div className="my-8 delay-1000 animate-slidedown">
                 {
                     overview.map(item =>

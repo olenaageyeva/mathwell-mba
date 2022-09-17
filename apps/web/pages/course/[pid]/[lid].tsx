@@ -44,7 +44,7 @@ const LessonPage = () => {
             newProgress[0] = 1;
             dispatch(setProgressState(newProgress))
         }
-    }, [index, progress])
+    }, [index, progress, dispatch, progress.length])
 
     const handleClick = (back: boolean) => {
         const idx = Number(index) || 0;
