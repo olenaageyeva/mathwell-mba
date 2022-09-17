@@ -10,6 +10,7 @@ export const lessons: ILessons = {
     design: [
         {
             title: "Characteristics of a good design",
+            overview: ["Discover design phases", "Learn characteristics of a good design", "Identify problems with design"],
             content: [
                 {
                     type: "plain", image: "/steve-harvey.png",
@@ -119,7 +120,7 @@ export const lessons: ILessons = {
                         },
 
                     ]
-                },             
+                },
                 {
                     type: "plain", image: "/no-result-found.png",
                     text: [
@@ -160,7 +161,8 @@ export const lessons: ILessons = {
 
                     ]
                 },
-            ]
+            ],
+            keyTerms: ["Accessibility and equitability", "Usability", "Usfulness", "Product design", "Positive content"]
         },
         {
             title: "Customer validation",
@@ -261,11 +263,13 @@ export interface ILessons {
 
 export interface ILesson {
     title: string;
-    content: IContent[]
+    overview?: string[];
+    content: IContent[];
+    keyTerms?: string[]
 }
 
 export interface IContent {
     type: "plain" | "question" | "match" | "sort" | "label" | "type" | null;
     image: string | null;
-    text: { type: string, place?: string, text: string | string[]}[];
+    text: { type: string, place?: string, text: string | string[] }[];
 }

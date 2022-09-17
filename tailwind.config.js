@@ -2,7 +2,11 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'custom-image': "url('public/hex-check.png')",
+       }
+    },
   },
   plugins: [],
 }
