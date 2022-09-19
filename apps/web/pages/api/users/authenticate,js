@@ -1,0 +1,24 @@
+import { apiHandler, usersRepo, omit } from '../../../helpers/api';
+import { useDispatch, useSelector } from "react-redux";
+import { selectAuthState, selectUser, setAuthState } from "../../../store/authSlice";
+
+export default apiHandler({
+    post: authenticate
+});
+
+function authenticate(req, res) {
+    //const user = useSelector(selectUser);
+    const { username, password } = req.body;
+    const user = usersRepo.find(x => x.username === username && x.password === password);
+
+     console.log("login", user)
+
+    if (!user)  return res.status(404).end();
+    //throw 'Username or password is incorrect';
+
+
+  
+    return res.status(200).json(omit(user, 'password'));
+
+    //return res.status(200).json(user)
+}
