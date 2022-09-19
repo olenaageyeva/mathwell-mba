@@ -29,6 +29,8 @@ const LessonPage = () => {
     const [current, setCurrent] = useState(0);
     const [overviewShown, setOverviewShown] = useState(false);
 
+    console.log("overview", overviewShown)
+
     useEffect(() => {
         if (progress.length) {
             switch (progress[Number(index)]) {
@@ -54,17 +56,16 @@ const LessonPage = () => {
         console.log("back", back, current, index)
     }
 
-    return <div className="w-full bg-slate-50 h-screen">
-        <Header {...{ view: "lesson", course: String(pid), lesson: lid, current }} />
-        {overviewShown ?
-            !isLastPage ?
-                <div className="flex justify-items-end h-full p-20 w-full  justify-between">
-                    <Link href={`/course/${pid}/${lid}?index=${Number(index) > 0 ? Number(index) - 1 : 0}`}>
-                        <button onClick={() => handleClick(true)} className='text-xl font-nunito font-normal text-emerald-600 px-12 py-4 m-4 self-end bg-emerald-100 uppercase'>previous</button>
-                    </Link>
+    const isTopText = text.find(item=>item.place==="top")
 
-                    <div className="max-w-6xl w-full h-full">
-                        <div className='w-full text-2xl p-4'>
+    return <div className="w-full bg-slate-50 h-screen">
+        {/* <Header {...{ view: "lesson", course: String(pid), lesson: lid, current }} /> */}
+        {overviewShown || Number(index) ?
+            !isLastPage ?
+                <div className="flex-col justify-items-end h-full w-full h-5/6 pt-8 ">
+
+                    <div className="w-full h-4/5">
+                        {isTopText &&<div className='w-full text-2xl p-4 h-1/6'>
                             {text?.map(item => {
                                 if (item.place === "top") {
                                     switch (item.type) {
@@ -77,8 +78,8 @@ const LessonPage = () => {
                                 }
                             }
                             )}
-                        </div>
-                        <div className='w-1/3 h-1/3 mx-auto mb-12 relative'>
+                        </div>}
+                        <div className='w-1/2 h-2/3 mx-auto mb-12 relative'>
                             <Image src={`${image}`} layout="fill" objectFit='contain' alt="image" />
                         </div>
                         <div className='w-full text-2xl p-4'>
@@ -98,12 +99,18 @@ const LessonPage = () => {
                             )}
                         </div>
                     </div>
+                    <div className='flex justify-items-end h-1/5  w-full  justify-between'>
+                        <Link href={`/course/${pid}/${lid}?index=${Number(index) > 0 ? Number(index) - 1 : 0}`}>
+                            <button onClick={() => handleClick(true)} className='text-xl font-nunito font-normal text-emerald-600 px-12 py-4 m-4 self-end bg-emerald-100 uppercase'>previous</button>
+                        </Link>
+                        <Link href={`/course/${pid}/${lid}?index=${isLastPage ? index : index ? Number(index) + 1 : 1}`}>
+                            <button onClick={() => handleClick(false)} className='text-xl font-nunito font-normal text-slate-100 px-12 py-4 m-4 self-end bg-emerald-600 uppercase'>next</button>
+                        </Link>
+                    </div>
 
-                    <Link href={`/course/${pid}/${lid}?index=${isLastPage ? index : index ? Number(index) + 1 : 1}`}>
-                        <button onClick={() => handleClick(false)} className='text-xl font-nunito font-normal text-slate-100 px-12 py-4 m-4 self-end bg-emerald-600 uppercase'>next</button>
-                    </Link>
+
                 </div> :
-                <Summary  {...{ course: String(pid), lesson: Number(lid), done: () => setOverviewShown(true) }} />
+                <Summary  {...{ course: String(pid), lesson: Number(lid), done: () => { } }} />
             : <Overview  {...{ course: String(pid), lesson: Number(lid), done: () => setOverviewShown(true) }} />}
     </div>
 }
